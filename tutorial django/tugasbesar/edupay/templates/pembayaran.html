@@ -1,0 +1,18 @@
+<html>
+    <head>
+        <title></title>
+    </head>
+    <body>
+        <br>
+        <div class="row">
+            <div class="card-card body">
+                <p>Apakah kamu ingin melanjutkan pembayaran?</p>
+                <form action="{%url 'Pembayaran'%}" method="POST">
+                    {% csrf_token %}
+                    <a class="btn btn-warning" href="{%url 'home' %}">Cancel</a>
+                    <input class="btn btn-danger" type="submit" name="Confirm">
+                </form>
+            </div>
+        </div>
+    </body>
+</html>
